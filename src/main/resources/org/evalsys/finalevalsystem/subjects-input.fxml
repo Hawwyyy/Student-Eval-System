@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #F5F1E6;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.evalsys.finalevalsystem.SubjectSelectionController">
+    <children>
+        <!-- Modern Header -->
+        <StackPane layoutX="0.0" layoutY="0.0" prefHeight="80.0" style="-fx-background-color: #E8DCBF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label text="Recent Subjects Taken" textFill="#5D4C39">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#00000033" height="5.0" radius="2.0" width="5.0" />
+                    </effect>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow color="#00000033" height="5.0" radius="2.0" width="5.0" />
+            </effect>
+        </StackPane>
+
+        <!-- Instructions -->
+        <Label layoutX="50.0" layoutY="90.0" text="Please select the subjects you've recently taken and indicate whether you passed or failed each one." textFill="#5D4C39" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="95.0">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+
+        <!-- Subjects Scroll Container -->
+        <ScrollPane fitToWidth="true" layoutX="50.0" layoutY="120.0" prefHeight="300.0" prefWidth="600.0" style="-fx-background: #F5F1E6; -fx-border-color: #D9CDAE; -fx-border-radius: 8; -fx-background-color: #F0EAD6;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="125.0">
+            <content>
+                <VBox fx:id="subjectsContainer" spacing="15" style="-fx-background-color: #F0EAD6; -fx-padding: 15;">
+                    <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                    </padding>
+                </VBox>
+            </content>
+            <effect>
+                <DropShadow color="#00000044" height="8.0" radius="3.5" width="8.0" />
+            </effect>
+        </ScrollPane>
+
+        <!-- Button Container -->
+        <HBox alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+            <children>
+                <Button fx:id="backButton" mnemonicParsing="false" style="-fx-background-color: #D9CDAE; -fx-text-fill: #5D4C39; -fx-background-radius: 8; -fx-cursor: hand;" text="Back">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="12.0" left="30.0" right="30.0" top="12.0" />
+                    </padding>
+                    <effect>
+                        <DropShadow color="#00000033" height="3.0" radius="1.0" width="3.0" />
+                    </effect>
+                </Button>
+                <Button fx:id="submitButton" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: #C4A980; -fx-text-fill: #FFFFFF; -fx-background-radius: 8; -fx-cursor: hand;" text="Submit">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="12.0" left="35.0" right="35.0" top="12.0" />
+                    </padding>
+                    <effect>
+                        <DropShadow color="#00000044" height="5.0" radius="2.0" width="5.0" />
+                    </effect>
+                </Button>
+            </children>
+        </HBox>
+
+        <!-- Status indicator -->
+        <Label layoutX="50.0" layoutY="430.0" text="* All fields are required" textFill="#BA6953" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="50.0">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
